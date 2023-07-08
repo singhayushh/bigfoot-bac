@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /*
     Load env file based on run command.
     Look at the package.json file, the script to run the server passes a variable named NODE_ENV using the cross-env package. We use the variable to determine which env file to call -> either .env.production or .env.development

@@ -1,0 +1,18 @@
+import { Document } from "mongoose";
+
+type UserDto = {
+    name: string;
+    email: string;
+    password: string;
+    dob: string;
+    age: string;
+    sex: string;
+    phone: string;
+    country: string;
+    otp: string;
+    isPhoneVerified: boolean;
+};
+
+type UserSchemaDto = UserDto & Document;
+
+export { UserDto, UserSchemaDto };
