@@ -109,5 +109,3 @@ dist
 /build
 /lib
 
-# typedoc output
-docs/
