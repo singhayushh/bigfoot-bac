@@ -5,12 +5,11 @@ type UserDto = {
     email: string;
     password: string;
     dob: string;
-    age: string;
+    age: number;
     sex: string;
     phone: string;
     country: string;
-    otp: string;
-    isPhoneVerified: boolean;
+    hasContributed: boolean;
 };
 
 type UserSchemaDto = UserDto & Document;

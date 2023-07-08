@@ -20,7 +20,7 @@ const userSchema: Schema<UserSchemaDto> = new Schema(
             required: true,
         },
         age: {
-            type: String,
+            type: Number,
             required: true,
         },
         sex: {
@@ -35,10 +35,7 @@ const userSchema: Schema<UserSchemaDto> = new Schema(
             type: String,
             required: true,
         },
-        otp: {
-            type: String,
-        },
-        isPhoneVerified: {
+        hasContributed: {
             type: Boolean,
             default: false,
         },
