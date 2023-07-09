@@ -8,7 +8,7 @@ cloudinary.config({
 });
 
 const params = {
-    folder: "Espektro",
+    folder: "Hack4Bengal",
     allowedFormats: ["jpeg", "png", "jpg"],
 };
 

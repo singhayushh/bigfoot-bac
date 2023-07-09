@@ -5,8 +5,7 @@ import { storage } from "./cloudinary.config";
 const allowedMimeTypes: string[] = [
     "image/png",
     "image/jpg",
-    "image/jpeg",
-    "image/gif",
+    "image/jpeg"
 ];
 
 const multerOptions: multer.Options = {
