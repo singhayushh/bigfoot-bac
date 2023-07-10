@@ -3,8 +3,6 @@ import pickle
 import numpy as np
 import pandas as pd
 
-model = pickle.load(open('scripts/model.pkl', 'rb'))
-
 Cylinders=0.0
 Engine_Size=0.0
 Fuel_Consumption_City=0.0
@@ -47,6 +45,8 @@ Vehicle_Class_Type_Sedan=0
 Vehicle_Class_Type_SUV=0
 Vehicle_Class_Type_Truck=0
 
+model = pickle.load(open('scripts/model.pkl', 'rb'))
+
 def get_prediction(engine, cylinder, city, highway, combination, combination_mpg, make, vehicle, transmission, fuel):
 
     # step 1. prepare data for ml feeding
@@ -60,6 +60,49 @@ def get_prediction(engine, cylinder, city, highway, combination, combination_mpg
     return np.round(prediction,2)
 
 def prepare_data(engine, cylinder, city, highway, combination, combination_mpg, make, vehicle, transmission, fuel):
+
+    global Cylinders
+    global Engine_Size
+    global Fuel_Consumption_City
+    global Fuel_Consumption_Comb
+    global Fuel_Consumption_Comb_mpg
+    global Fuel_Consumption_Hwy
+    global Fuel_Type_E
+    global Fuel_Type_X
+    global Fuel_Type_Z
+    global Make_Type_Luxury
+    global Make_Type_Premium
+    global Make_Type_Sports
+    global Transmission_A4
+    global Transmission_A5
+    global Transmission_A6
+    global Transmission_A7
+    global Transmission_A8
+    global Transmission_A9
+    global Transmission_AM5
+    global Transmission_AM6
+    global Transmission_AM7
+    global Transmission_AM8
+    global Transmission_AM9
+    global Transmission_AS10
+    global Transmission_AS4
+    global Transmission_AS5
+    global Transmission_AS6
+    global Transmission_AS7
+    global Transmission_AS8
+    global Transmission_AS9
+    global Transmission_AV
+    global Transmission_AV10
+    global Transmission_AV6
+    global Transmission_AV7
+    global Transmission_AV8
+    global Transmission_M5
+    global Transmission_M6
+    global Transmission_M7
+    global Vehicle_Class_Type_Sedan
+    global Vehicle_Class_Type_SUV
+    global Vehicle_Class_Type_Truck
+
     Cylinders=float(cylinder)
     Engine_Size=float(engine)
     Fuel_Consumption_City=float(city)
